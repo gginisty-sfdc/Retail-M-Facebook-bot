@@ -4,11 +4,11 @@ let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
     formatter = require('./formatter');
 
-exports.perfectclimbing = (sender) => {
+exports.camprelax = (sender) => {
 	console.log('camprelax');
 };
 
-exports.perfectclimbing = (sender) => {
+exports.climbmountain = (sender) => {
     console.log('climbmountain');
 };
 
