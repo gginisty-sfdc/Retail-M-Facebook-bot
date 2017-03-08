@@ -3,6 +3,30 @@
 let moment = require("moment"),
     numeral = require("numeral");
 
+
+exports.challenge = response => {
+    return {
+        "text":"NTO is a community of experts to help you achieve your goals. What challenge would you like to take on in the next few months?",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Camp and Relax",
+            "payload":"camprelax"
+          },
+          {
+            "content_type":"text",
+            "title":"Climb a Mountain",
+            "payload":"climbmountain"
+          },
+          {
+            "content_type":"text",
+            "title":"Perfect My Rock Climbing",
+            "payload":"perfectclimbing"
+          }
+        ]
+    }
+};
+/*
 exports.onBoard1 = response => {
     return {
         "text":"Bonjour " + response.first_name + " et bienvenue chez Cumulus Assurance. Que puis-je faire pour vous?",
@@ -482,4 +506,5 @@ exports.sendLocation = response => {
         ]
     }
 };
+*/
  

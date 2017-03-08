@@ -23,13 +23,15 @@ exports.test = (sender) => {
         messenger.send({text: `${response.service_plan}`}, sender);
     });
 };
-exports.hi = (sender) => {
-    console.log('hi');
+exports.hello = (sender) => {
+    console.log('hello');
     messenger.getUserInfo(sender).then(response => {
-        messenger.send({text: `Hello, ${response.first_name}!`}, sender);
+        messenger.send({text: `Hello, ${response.first_name}!. I am your Northen Trail assistant.`}, sender);
+        messenger.send({text: `I'm just a humble chatbot, really. But you can talk to my human pals at any time by typing “help”.`}, sender);
+        messenger.send(formatter.challenge(response), sender);
     });
 };
-
+/*
 exports.start = (sender) => {
     console.log('start');
     messenger.getUserInfo(sender).then(response => {
@@ -313,3 +315,4 @@ exports.room5 = (sender) => {
         });
     });
 };
+*/
