@@ -32,7 +32,7 @@ exports.hello = (sender) => {
         }, 2000);
         setTimeout(function(){ 
             messenger.send(formatter.challenge(response), sender);
-        }, 2000);
+        }, 3000);
         
         
     });
