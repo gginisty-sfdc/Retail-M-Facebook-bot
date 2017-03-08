@@ -39,9 +39,11 @@ exports.joincommunity = (sender, values) => {
 
 exports.seereviews = (sender, values) => {
     console.log('seereviews values: ', values);
+    /*
     salesforce.getReview({theId: values[1]}, sender).then((theReview) => {
         //messenger.send(formatter.formatReview(theReview), sender);
     });
+    */
 };
 
 exports.getinstore = (sender, values) => {

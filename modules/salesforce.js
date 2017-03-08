@@ -15,6 +15,10 @@ let org = nforce.createConnection({
     autoRefresh: true
 });
 
+let theLead = nforce.createSObject('Lead');
+theLead.set('Company', `Facebook Customer`);
+theLead.set('Status', 'New');
+
 let theLeadId = '';
 
 let getLeadId = () =>{
@@ -304,6 +308,31 @@ let getReview = (params, sender) => {
             }
         });
     });
+};
+
+let setLeadInfo = (values) => {
+    if(values){
+        console.log('values: ', values);
+        console.log('theLead: ', theLead);
+        /*
+        return new Promise((resolve,reject) => {
+            theLead.set('Company', `Facebook Customer`);
+            theLead.set('Status', 'New');
+
+            org.insert({ sobject: l }, function(err, resp){
+                if(!err){
+                    console.log('It worked!: ', l);
+                    theLeadId = l._fields.id;
+                    console.log('It worked!: ', theLeadId);
+                    resolve(l);
+                }
+                else{
+                    reject("An error occurred while creating a lead");
+                }
+            });
+        });
+        */
+    }
 };
 
 login();
