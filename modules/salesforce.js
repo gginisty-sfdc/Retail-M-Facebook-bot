@@ -315,6 +315,7 @@ let setLeadInfo = (values) => {
         if(values){
             console.log('values: ', values);
             console.log('theLead: ', theLead);
+            resolve(values);
         /*
         theLead.set('Company', `Facebook Customer`);
         theLead.set('Status', 'New');
@@ -331,6 +332,9 @@ let setLeadInfo = (values) => {
             }
         });
         */
+        }
+        else{
+            reject("error");
         }
     });
 };
