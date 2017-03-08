@@ -43,6 +43,7 @@ app.post('/webhook', (req, res) => {
             }
 
         } else if (event.message && event.message.text) {
+            console.log('message');
             let result = processor.match(event.message.text);
             if (result) {
                 let handler = handlers[result.handler];
@@ -53,6 +54,7 @@ app.post('/webhook', (req, res) => {
                 }
             }
         } else if (event.postback) {
+            console.log('postback');
             let payload = event.postback.payload.split(",");
             let postback = postbacks[payload[0]];
             if (postback && typeof postback === "function") {
