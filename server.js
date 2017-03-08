@@ -36,7 +36,12 @@ app.post('/webhook', (req, res) => {
             console.log('payload: ', payload);
             let quickreply = quickreplies[payload[0]];
             console.log('quickreply: ', quickreply);
-            
+            if (quickreply && typeof quickreply === "function") {
+                quickreply(sender, payload);
+            } else {
+                console.log("Quickreply " + quickreply + " is not defined");
+            }
+
         } else if (event.message && event.message.text) {
             let result = processor.match(event.message.text);
             if (result) {
