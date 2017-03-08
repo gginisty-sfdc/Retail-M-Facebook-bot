@@ -247,8 +247,68 @@ let findArticles = (params) => {
             }
         });
     });
-
 };
+
+let getRecommendation = (params, sender) => {
+    console.log('inside getRecommendation');
+    let where = "";
+    if (params) {
+        let parts = [];
+        /*
+        console.log('params.suggestion.service_plan: ', params.suggestion.service_plan);
+        if (params.suggestion.service_plan) parts.push(`recommendId__c = ${params.suggestion.service_plan}`);
+        if (parts.length>0) {
+            where = "WHERE " + parts.join(' AND ');
+        }
+        */
+    }
+    return new Promise((resolve, reject) => {
+
+        console.log("params: ", params);
+        console.log("where: ", where);
+
+        let q = `SELECT 
+                    Title, 
+                    KnowledgeArticleId, 
+                    Summary 
+                FROM KnowledgeArticleVersion 
+                WHERE Language='en_US' 
+                AND PublishStatus='online'
+                
+                LIMIT 1`;
+
+        console.log('q: ',q);
+
+        org.query({ query: q }, function(err, resp){
+
+            if(!err && resp.records) {
+
+                var theRecommend = resp.records[0];
+                console.log('theRecommend: ', theRecommend);
+
+                /*
+                theRecommend.set('Lead__c', theLeadId);
+                //resolve(theRecommend);
+                org.update({ sobject: theRecommend }, function(err, resp){
+                    if(!err){
+                        console.log('It worked!');
+                        resolve(theRecommend);
+                    }
+                    else{
+                        reject("Error updating the Lead");
+                    }
+                });
+                */
+                resolve(theRecommend);
+            }
+            else{
+                console.log('err: ', err);
+                reject("Error");
+            }
+        });
+    });
+};
+
 
 login();
 
