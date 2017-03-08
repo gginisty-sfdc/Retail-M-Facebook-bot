@@ -175,54 +175,6 @@ let updateCase = (params, sender) => {
     }
 };
 
-let getRecommendation = (params, sender) => {
-    console.log('inside getRecommendation');
-    let where = "";
-    if (params) {
-        let parts = [];
-        console.log('params.suggestion.service_plan: ', params.suggestion.service_plan);
-        if (params.suggestion.service_plan) parts.push(`recommendId__c = ${params.suggestion.service_plan}`);
-        if (parts.length>0) {
-            where = "WHERE " + parts.join(' AND ');
-        }
-    }
-    return new Promise((resolve, reject) => {
-
-        console.log("params: ", params);
-        console.log("where: ", where);
-
-        let q = `SELECT Id, Name, image__c, recommendId__c, subtitle__c FROM Recommendation__c ${where} LIMIT 1`;
-
-        console.log('q: ',q);
-
-        org.query({ query: q }, function(err, resp){
-
-            if(!err && resp.records) {
-
-                var theRecommend = resp.records[0];
-                console.log('theRecommend: ', theRecommend);
-
-                console.log('theLeadId: ', theLeadId);
-
-                theRecommend.set('Lead__c', theLeadId);
-                //resolve(theRecommend);
-                org.update({ sobject: theRecommend }, function(err, resp){
-                    if(!err){
-                        console.log('It worked!');
-                        resolve(theRecommend);
-                    }
-                    else{
-                        reject("Error updating the Lead");
-                    }
-                });
-
-            }
-            else{
-                console.log('err: ', err);
-            }
-        });
-    });
-};
 
 let findArticles = (params) => {
     let where = "";
