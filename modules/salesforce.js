@@ -266,7 +266,7 @@ let getReview = (params, sender) => {
     if (params) {
         
         console.log('params.theId: ', params.theId);
-        where = " AND KnowledgeArticleId = ${params.theId}"
+        where = ` AND KnowledgeArticleId = ${params.theId}`
         /*
         if (params.suggestion.service_plan) parts.push(`recommendId__c = ${params.suggestion.service_plan}`);
         if (parts.length>0) {
