@@ -235,7 +235,9 @@ let findArticles = (params) => {
                     KnowledgeArticleId, 
                     Summary 
                 FROM KnowledgeArticleVersion 
-                WHERE Language='en_US' AND PublishStatus='online'
+                WHERE Language='en_US' 
+                AND PublishStatus='online' 
+                AND (KnowledgeArticleId = 'kA40Y000000gKXo' OR KnowledgeArticleId = 'kA40Y000000gKXj' OR KnowledgeArticleId = 'kA40Y000000gKXt')
                 LIMIT 4`;
         org.query({query: q}, (err, resp) => {
             if (err) {
