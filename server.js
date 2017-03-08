@@ -31,10 +31,12 @@ app.post('/webhook', (req, res) => {
         if (process.env.MAINTENANCE_MODE && ((event.message && event.message.text) || event.postback)) {
             sendMessage({text: `Sorry I'm taking a break right now.`}, sender);
         } else if(event.message.quick_reply){
-
+            console.log('inside quickreply');
             let payload = event.message.quick_reply.payload.split(",");
+            console.log('payload: ', payload);
             let quickreply = quickreplies[payload[0]];
-
+            console.log('quickreply: ', quickreply);
+            
         } else if (event.message && event.message.text) {
             let result = processor.match(event.message.text);
             if (result) {
