@@ -224,10 +224,34 @@ let getRecommendation = (params, sender) => {
     });
 };
 
+let findArticles = (params) => {
+    let where = "";
+    if (params) {
+
+    }
+    return new Promise((resolve, reject) => {
+        let q = `SELECT 
+                    Title, 
+                    KnowledgeArticleId, 
+                    Summary 
+                FROM KnowledgeArticleVersion 
+                WHERE Language='en_US' AND PublishStatus='online'
+                LIMIT 4`;
+        org.query({query: q}, (err, resp) => {
+            if (err) {
+                reject("An error as occurred");
+            } else {
+                resolve(resp.records);
+            }
+        });
+    });
+
+};
 
 login();
 
 exports.org = org;
+exports.findArticles = findArticles;
 exports.createLead = createLead;
 exports.updateLead = updateLead;
 exports.createCase = createCase;

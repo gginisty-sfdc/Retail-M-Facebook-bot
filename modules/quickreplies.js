@@ -6,16 +6,29 @@ let salesforce = require('./salesforce'),
 
 exports.camprelax = (sender) => {
 	console.log('camprelax');
-    messenger.send({text: `camprelax`}, sender);
+    messenger.send(formatter.easyone(response), sender);
+    //messenger.send({text: `camprelax`}, sender);
 };
 
 exports.climbmountain = (sender) => {
     console.log('climbmountain');
-    messenger.send({text: `climbmountain`}, sender);
 };
 
 exports.perfectclimbing = (sender) => {
     console.log('perfectclimbing');
-    messenger.send({text: `perfectclimbing`}, sender);
 };
+
+exports.browseproducts = (sender) => {
+    console.log('browseproducts');
+    salesforce.findArticles().then(articles => {
+        messenger.send(formatter.formatArticles(articles), sender);
+    });
+};
+
+exports.askexperts = (sender) => {
+    console.log('askexperts');
+    
+};
+
+
 
