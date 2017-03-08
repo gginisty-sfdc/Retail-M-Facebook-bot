@@ -106,71 +106,71 @@ exports.formatRecommendation = rec => {
 
     let elements = [];
         elements.push(  
-            /*
+            
             {
-                title: rec.get("Name"),
-                subtitle: `${rec.get("subtitle__c")}`,
-                "image_url": rec.get("image__c"),
+                title: rec.get("Title"),
+                subtitle: `Recommendation`,
+                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
                     {
+                        "type": "postback",
+                        "title": "See Reviews",
+                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Get In Store",
+                        "payload": "getinstore"
+                    },
+                    {
                         "type":"web_url",
-                        "url":"https://www.facebook.com/cumulusfrance",
-                        "title":"Avis Communauté"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Rdv conseiller",
-                        "payload": "schedule_visit"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Souscrire",
-                        "payload": "image_postback"
+                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/" + rec.get("KnowledgeArticleId"),
+                        "title":"Purchase"
                     }
                 ]
             },
-            */
+            
             {
                 title: 'Cumulus Confort',
                 subtitle: `17,99€ par mois`,
-                "image_url": 'https://drive.google.com/uc?export=view&id=0BxwASYlURQ-JWHdVeWM2dVc5Q2o0dzZVMUJVVGE5NGg3MF84',
+                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
                     {
+                        "type": "postback",
+                        "title": "See Reviews",
+                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Get In Store",
+                        "payload": "getinstore"
+                    },
+                    {
                         "type":"web_url",
-                        "url":"https://www.facebook.com/cumulusfrance",
-                        "title":"Avis Communauté"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Rdv conseiller",
-                        "payload": "schedule_visit"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Souscrire",
-                        "payload": "image_postback"
+                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "title":"Purchase"
                     }
                 ]
             },
             {
                 title: 'Cumulus Confort Plus',
                 subtitle: `20,99€ par mois`,
-                "image_url": 'https://drive.google.com/uc?export=view&id=0BxwASYlURQ-JLWRiUjBPejFHREh3dnFZMjNRbzh2U2hyOE9V',
+                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
                     {
+                        "type": "postback",
+                        "title": "See Reviews",
+                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Get In Store",
+                        "payload": "getinstore"
+                    },
+                    {
                         "type":"web_url",
-                        "url":"https://www.facebook.com/cumulusfrance",
-                        "title":"Avis Communauté"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Rdv conseiller",
-                        "payload": "schedule_visit"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Souscrire",
-                        "payload": "image_postback"
+                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "title":"Purchase"
                     }
                 ]
             }

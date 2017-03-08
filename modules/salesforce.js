@@ -226,7 +226,6 @@ let getRecommendation = (params, sender) => {
                 FROM KnowledgeArticleVersion 
                 WHERE Language='en_US' 
                 AND PublishStatus='online'
-                
                 LIMIT 1`;
 
         console.log('q: ',q);
@@ -261,6 +260,51 @@ let getRecommendation = (params, sender) => {
     });
 };
 
+let getReview = (params, sender) => {
+    console.log('inside getReview');
+    let where = "";
+    if (params) {
+        
+        console.log('params.theId: ', params.theId);
+        where = " AND KnowledgeArticleId = ${params.theId}"
+        /*
+        if (params.suggestion.service_plan) parts.push(`recommendId__c = ${params.suggestion.service_plan}`);
+        if (parts.length>0) {
+            where = "WHERE " + parts.join(' AND ');
+        }
+        */
+    }
+    return new Promise((resolve, reject) => {
+
+        console.log("params: ", params);
+        console.log("where: ", where);
+
+        let q = `SELECT 
+                    Title, 
+                    KnowledgeArticleId, 
+                    Summary 
+                FROM KnowledgeArticleVersion 
+                WHERE Language='en_US' 
+                AND PublishStatus='online' 
+                ${where}
+                LIMIT 1`;
+
+        console.log('q: ',q);
+
+        org.query({ query: q }, function(err, resp){
+
+            if(!err && resp.records) {
+
+                console.log('resp.records[0]: ', resp.records[0]);
+                resolve(resp.records[0]);
+            }
+            else{
+                console.log('err: ', err);
+                reject("Error");
+            }
+        });
+    });
+};
 
 login();
 
@@ -270,4 +314,5 @@ exports.createLead = createLead;
 exports.updateLead = updateLead;
 exports.createCase = createCase;
 exports.updateCase = updateCase;
+exports.getReview = getReview;
 exports.getRecommendation = getRecommendation;

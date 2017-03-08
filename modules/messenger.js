@@ -62,13 +62,10 @@ exports.getUserInfo = (userId) => {
     });
 };
 
-exports.getSuggestion = (zip,rooms) => {
+exports.getSuggestion = (arg1,arg2) => {
 
-    console.log('zip 0: ', zip);
-    zip = zip.substring(2);
-    console.log('zip 1: ', zip);
-    zip = parseInt(zip, 10);
-    console.log('zip 2: ', zip);
+    console.log('arg1: ', arg1);
+    console.log('arg2: ', arg2);
 
     return new Promise((resolve, reject) => {
 
@@ -76,8 +73,8 @@ exports.getSuggestion = (zip,rooms) => {
             url: `https://pio-octave-engine.herokuapp.com/queries.json`,
             method: 'POST',
             json : { 
-                voice_usage: zip,
-                data_usage: rooms,
+                voice_usage: arg1,
+                data_usage: arg2,
                 text_usage: 0
             }
         }, (error, response) => {
@@ -87,7 +84,6 @@ exports.getSuggestion = (zip,rooms) => {
             } else if (response.body.error) {
                 console.log('Error: ', response.body.error);
             } else {
-                console.log('zip 3: ', zip);
                 console.log('No Error: ', response.body);
                 var theResponse = JSON.stringify(response.body);
                 console.log('theResponse: ', theResponse);
