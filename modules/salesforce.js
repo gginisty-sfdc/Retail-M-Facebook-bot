@@ -348,4 +348,5 @@ exports.updateLead = updateLead;
 exports.createCase = createCase;
 exports.updateCase = updateCase;
 exports.getReview = getReview;
+exports.setLeadInfo = setLeadInfo;
 exports.getRecommendation = getRecommendation;
