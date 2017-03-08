@@ -5,6 +5,7 @@ var express = require('express'),
     processor = require('./modules/processor'),
     handlers = require('./modules/handlers'),
     postbacks = require('./modules/postbacks'),
+    quickreplies = require('./modules/quickreplies'),
     uploads = require('./modules/uploads'),
     FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN,
     app = express();
@@ -29,6 +30,11 @@ app.post('/webhook', (req, res) => {
         let sender = event.sender.id;
         if (process.env.MAINTENANCE_MODE && ((event.message && event.message.text) || event.postback)) {
             sendMessage({text: `Sorry I'm taking a break right now.`}, sender);
+        } else if(event.message.quick_reply){
+
+            let payload = event.message.quick_reply.payload.split(",");
+            let quickreply = quickreplies[payload[0]];
+
         } else if (event.message && event.message.text) {
             let result = processor.match(event.message.text);
             if (result) {
