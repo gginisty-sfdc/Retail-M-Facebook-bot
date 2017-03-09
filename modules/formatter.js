@@ -47,7 +47,7 @@ exports.easyone = response => {
 
 exports.easyone2 = response => {
     return {
-        "text":" ",
+        "text":"What else can I do for you?",
         "quick_replies":[
           {
             "content_type":"text",
@@ -56,7 +56,7 @@ exports.easyone2 = response => {
           },
           {
             "content_type":"text",
-            "title":"Ask The Experts",
+            "title":"Show Me More Advice",
             "payload":"askexperts"
           }
         ]
