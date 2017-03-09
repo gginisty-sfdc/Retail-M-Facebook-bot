@@ -20,6 +20,7 @@ exports.seereviews = (sender, values) => {
 
 exports.getinstore = (sender, values) => {
     console.log('getinstore');
+    messenger.send(formatter.showMap(), sender);
 };
 
 exports.helpful = (sender, values) => {
