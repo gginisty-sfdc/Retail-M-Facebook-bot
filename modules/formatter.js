@@ -115,7 +115,7 @@ exports.formatRecommendation = rec => {
                     {
                         "type": "postback",
                         "title": "See Reviews",
-                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                        "payload": "seereviews"
                     },
                     {
                         "type": "postback",
@@ -124,7 +124,7 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type":"web_url",
-                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/" + rec.get("KnowledgeArticleId"),
+                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
                         "title":"Purchase"
                     }
                 ]
@@ -138,7 +138,7 @@ exports.formatRecommendation = rec => {
                     {
                         "type": "postback",
                         "title": "See Reviews",
-                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                        "payload": "seereviews"
                     },
                     {
                         "type": "postback",
@@ -160,7 +160,7 @@ exports.formatRecommendation = rec => {
                     {
                         "type": "postback",
                         "title": "See Reviews",
-                        "payload": "seereviews," + rec.get("KnowledgeArticleId")
+                        "payload": "seereviews"
                     },
                     {
                         "type": "postback",
