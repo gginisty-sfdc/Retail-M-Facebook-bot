@@ -45,9 +45,9 @@ exports.askexperts = (sender) => {
 
 exports.trendequip = (sender) => {
     console.log('trendequip');
-    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then(()=> {
-        salesforce.createLead(sender).then(()=> {
-            messenger.send(formatter.formatRecommendation(), sender);
+    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then((return)=> {
+        salesforce.createLead(sender).then((return2)=> {
+            messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
     /*
@@ -62,18 +62,18 @@ exports.trendequip = (sender) => {
 
 exports.newtech = (sender) => {
     console.log('newtech');
-    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then(()=> {
-        salesforce.createLead(sender).then(()=> {
-            messenger.send(formatter.formatRecommendation(), sender);
+    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then((return)=> {
+        salesforce.createLead(sender).then((return2)=> {
+            messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
 };
 
 exports.lowcost = (sender) => {
     console.log('lowcost');
-    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then(()=> {
-        salesforce.createLead(sender).then(()=> {
-            messenger.send(formatter.formatRecommendation(), sender);
+    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then((return)=> {
+        salesforce.createLead(sender).then((return2)=> {
+            messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
 };
