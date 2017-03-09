@@ -45,8 +45,9 @@ exports.askexperts = (sender) => {
 
 exports.trendequip = (sender) => {
     console.log('trendequip');
-    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then((return)=> {
-        salesforce.createLead(sender).then((return2)=> {
+    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then(thereturn => {
+        salesforce.createLead(sender).then(return2 => {
+            console.log('return from createLead');
             messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
@@ -62,8 +63,9 @@ exports.trendequip = (sender) => {
 
 exports.newtech = (sender) => {
     console.log('newtech');
-    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then((return)=> {
-        salesforce.createLead(sender).then((return2)=> {
+    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then(thereturn => {
+        salesforce.createLead(sender).then( return2 => {
+            console.log('return from createLead');
             messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
@@ -71,8 +73,9 @@ exports.newtech = (sender) => {
 
 exports.lowcost = (sender) => {
     console.log('lowcost');
-    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then((return)=> {
-        salesforce.createLead(sender).then((return2)=> {
+    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then(thereturn => {
+        salesforce.createLead(sender).then( return2 => {
+            console.log('return from createLead');
             messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
