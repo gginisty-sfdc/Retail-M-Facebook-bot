@@ -45,6 +45,24 @@ exports.easyone = response => {
     }
 };
 
+exports.easyone2 = response => {
+    return {
+        "text":"",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Browse Products",
+            "payload":"browseproducts"
+          },
+          {
+            "content_type":"text",
+            "title":"Ask The Experts",
+            "payload":"askexperts"
+          }
+        ]
+    }
+};
+
 exports.formatArticles = articles => {
     let elements = [];
     articles.forEach(article => {

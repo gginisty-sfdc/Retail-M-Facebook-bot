@@ -45,7 +45,7 @@ exports.askexperts = (sender) => {
                 messenger.send(formatter.formatArticles(articles), sender);
             }, 2000);
             setTimeout(function(){ 
-                messenger.send(formatter.easyone(response), sender);
+                messenger.send(formatter.easyone2(response), sender);
             }, 3000);
         });
     });
