@@ -189,20 +189,26 @@ exports.formatRecommendation = rec => {
 
 exports.showReview = response => {
     return {
-        "text":"text from the #1 review from community - author",
-        "buttons": [
-            {
-                "type":"web_url",
-                "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
-                "title":"See More"
-            },
-            {
-                "type": "postback",
-                "title": "This was helpfull",
-                "payload": "helpful"
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": `text from the #1 review from community - author`,
+                "buttons": [
+                    {
+                        "type":"web_url",
+                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "title":"See More"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "This was helpfull",
+                        "payload": "helpful"
+                    }
+                ]
             }
-        ]
-    }
+        }
+    };
 };
 /*
 exports.onBoard1 = response => {
