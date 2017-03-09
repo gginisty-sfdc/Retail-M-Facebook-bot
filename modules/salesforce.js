@@ -49,7 +49,8 @@ let createLead = () => {
         org.insert({ sobject: theLead }, function(err, resp){
             if(!err){
                 console.log('It worked!: ', theLead);
-                resolve(theLead);
+                resolve(resp);
+                console.log('resp');
             }
             else{
                 reject("An error occurred while creating a lead");
