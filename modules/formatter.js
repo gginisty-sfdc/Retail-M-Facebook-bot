@@ -47,7 +47,7 @@ exports.easyone = response => {
 
 exports.easyone2 = response => {
     return {
-        "text":"",
+        "text":" ",
         "quick_replies":[
           {
             "content_type":"text",
