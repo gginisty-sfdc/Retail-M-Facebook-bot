@@ -307,6 +307,7 @@ let setLeadInfo = (values) => {
         if(values){
             if(values.q1){
                 theLead.set('sport_interest__c', values.q1 );
+                theLead.set('product_segment__c', '' );
             }
             if(values.q2){
                 theLead.set('product_segment__c', values.q2 );

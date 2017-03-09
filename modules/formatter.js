@@ -108,7 +108,7 @@ exports.formatRecommendation = rec => {
         elements.push(  
             
             {
-                title: rec.get("Title"),
+                title: 'Sample 1',
                 subtitle: `Recommendation`,
                 "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
@@ -131,8 +131,8 @@ exports.formatRecommendation = rec => {
             },
             
             {
-                title: 'Cumulus Confort',
-                subtitle: `17,99€ par mois`,
+                title: 'Sample 2',
+                subtitle: `Recommendation`,
                 "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
                     {
@@ -153,8 +153,8 @@ exports.formatRecommendation = rec => {
                 ]
             },
             {
-                title: 'Cumulus Confort Plus',
-                subtitle: `20,99€ par mois`,
+                title: 'Sample 3',
+                subtitle: `Recommendation`,
                 "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
                 "buttons": [
                     {
@@ -187,6 +187,23 @@ exports.formatRecommendation = rec => {
     };
 };
 
+exports.showReview = response => {
+    return {
+        "text":"text from the #1 review from community - author",
+        "buttons": [
+            {
+                "type":"web_url",
+                "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                "title":"See More"
+            },
+            {
+                "type": "postback",
+                "title": "This was helpfull",
+                "payload": "helpful"
+            }
+        ]
+    }
+};
 /*
 exports.onBoard1 = response => {
     return {
