@@ -202,7 +202,7 @@ exports.showReview = response => {
                     },
                     {
                         "type": "postback",
-                        "title": "This was helpfull",
+                        "title": "This was helpful",
                         "payload": "helpful"
                     }
                 ]
