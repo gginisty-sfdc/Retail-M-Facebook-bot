@@ -45,7 +45,9 @@ exports.askexperts = (sender) => {
 
 exports.trendequip = (sender) => {
     console.log('trendequip');
-    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then();
+    salesforce.setLeadInfo({q2 : 'trendequip'}, sender).then(()=> {
+        salesforce.createLead(sender).then();
+    });
     /*
     messenger.getSuggestion('1', '1').then(suggestResponse => {
         salesforce.getRecommendation({suggestion: suggestResponse}, sender).then((recommendationResponse) => {
@@ -58,12 +60,16 @@ exports.trendequip = (sender) => {
 
 exports.newtech = (sender) => {
     console.log('newtech');
-    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then();
+    salesforce.setLeadInfo({q2 : 'newtech'}, sender).then(()=> {
+        salesforce.createLead(sender).then();
+    });
 };
 
 exports.lowcost = (sender) => {
     console.log('lowcost');
-    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then();
+    salesforce.setLeadInfo({q2 : 'lowcost'}, sender).then(()=> {
+        salesforce.createLead(sender).then();
+    });
 };
 
 

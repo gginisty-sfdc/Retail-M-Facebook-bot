@@ -18,6 +18,8 @@ let org = nforce.createConnection({
 let theLead = nforce.createSObject('Lead');
 theLead.set('Company', `Facebook Customer`);
 theLead.set('Status', 'New');
+theLead.set('FirstName', `Pierre`);
+theLead.set('LastName', `Martin`);
 
 let theLeadId = '';
 
@@ -40,30 +42,20 @@ let login = () => {
     });
 };
 
-let createLead = (customerFName, customerLName, customerId) => {
-    if(customerFName){
-        return new Promise((resolve,reject) => {
-            var l = nforce.createSObject('Lead');
-            l.set('Company', `Facebook Customer`);
-            l.set('FirstName', `${customerFName}`);
-            l.set('LastName', `${customerLName}`);
-            l.set('Description', "Facebook id: " + customerId);
-            l.set('Status', 'New');
-            l.set('Lead_Score__c', 50);
+let createLead = () => {
 
-            org.insert({ sobject: l }, function(err, resp){
-                if(!err){
-                    console.log('It worked!: ', l);
-                    theLeadId = l._fields.id;
-                    console.log('It worked!: ', theLeadId);
-                    resolve(l);
-                }
-                else{
-                    reject("An error occurred while creating a lead");
-                }
-            });
+    return new Promise((resolve,reject) => {
+        console.log('Inside createLead: ', theLead);
+        org.insert({ sobject: theLead }, function(err, resp){
+            if(!err){
+                console.log('It worked!: ', theLead);
+                resolve(theLead);
+            }
+            else{
+                reject("An error occurred while creating a lead");
+            }
         });
-    }
+    });
 };
 
 let updateLead = (params, sender) => {
@@ -313,25 +305,15 @@ let getReview = (params, sender) => {
 let setLeadInfo = (values) => {
     return new Promise((resolve,reject) => {
         if(values){
+            if(values.q1){
+                theLead.set('sport_interest__c', values.q1 );
+            }
+            if(values.q2){
+                theLead.set('product_segment__c', values.q2 );
+            }
             console.log('values: ', values);
             console.log('theLead: ', theLead);
             resolve(values);
-        /*
-        theLead.set('Company', `Facebook Customer`);
-        theLead.set('Status', 'New');
-
-        org.insert({ sobject: l }, function(err, resp){
-            if(!err){
-                console.log('It worked!: ', l);
-                theLeadId = l._fields.id;
-                console.log('It worked!: ', theLeadId);
-                resolve(l);
-            }
-            else{
-                reject("An error occurred while creating a lead");
-            }
-        });
-        */
         }
         else{
             reject("error");
