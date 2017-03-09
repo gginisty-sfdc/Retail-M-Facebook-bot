@@ -38,8 +38,16 @@ exports.browseproducts = (sender) => {
 
 exports.askexperts = (sender) => {
     console.log('askexperts');
-    salesforce.findArticles().then(articles => {
-        messenger.send(formatter.formatArticles(articles), sender);
+    messenger.getUserInfo(sender).then(response => {
+        salesforce.findArticles().then(articles => {
+            messenger.send({text: `Here are our recommended articles:`}, sender);
+            setTimeout(function(){ 
+                messenger.send(formatter.formatArticles(articles), sender);
+            }, 2000);
+            setTimeout(function(){ 
+                messenger.send(formatter.easyone(response), sender);
+            }, 3000);
+        });
     });
 };
 
@@ -51,14 +59,6 @@ exports.trendequip = (sender) => {
             messenger.send(formatter.formatRecommendation(return2), sender);
         });
     });
-    /*
-    messenger.getSuggestion('1', '1').then(suggestResponse => {
-        salesforce.getRecommendation({suggestion: suggestResponse}, sender).then((recommendationResponse) => {
-            //messenger.send({text: `Très bien, voici nos offres recommandées`}, sender);
-            messenger.send(formatter.formatRecommendation(recommendationResponse), sender);
-        });
-    });
-    */
 };
 
 exports.newtech = (sender) => {
