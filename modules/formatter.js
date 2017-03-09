@@ -239,7 +239,7 @@ exports.showMap = response => {
                 "template_type": "generic",
                 "elements": {
                     "element": {
-                        "title": "Your current location",
+                        "title": "Store Location",
                         "image_url": "https:\/\/maps.googleapis.com\/maps\/api\/staticmap?size=764x400&center="+lat+","+long+"&zoom=25&markers="+lat+","+long,
                         "item_url": "http:\/\/maps.apple.com\/maps?q="+lat+","+long+"&z=16"
                     }
