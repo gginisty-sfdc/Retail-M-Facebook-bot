@@ -126,9 +126,9 @@ exports.formatRecommendation = rec => {
         elements.push(  
             
             {
-                title: 'Sample 1',
-                subtitle: `Recommendation`,
-                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
+                title: 'Ultralight tent',
+                subtitle: `Comfort, safety, and enjoyment on every adventure`,
+                "image_url": 'https://www.dropbox.com/s/l0gqvgjb0w2zo9w/1.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -149,9 +149,9 @@ exports.formatRecommendation = rec => {
             },
             
             {
-                title: 'Sample 2',
-                subtitle: `Recommendation`,
-                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
+                title: 'Himalaya Nap Hammock',
+                subtitle: `20% discount on our best-selling hammock!`,
+                "image_url": 'https://www.dropbox.com/s/24lqqpc7nvqved2/2.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -171,9 +171,9 @@ exports.formatRecommendation = rec => {
                 ]
             },
             {
-                title: 'Sample 3',
-                subtitle: `Recommendation`,
-                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
+                title: 'Survival fire starter kit',
+                subtitle: `Strikes up to 15,000 times. Only 31 grams.`,
+                "image_url": 'https://www.dropbox.com/s/dta9hz8dm49qfbg/3.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
