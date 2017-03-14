@@ -69,7 +69,7 @@ exports.formatArticles = articles => {
             elements.push({
                 title: article.get("Title"),
                 subtitle: article.get("Summary"),
-                "image_url": 'http://az616578.vo.msecnd.net/files/2016/01/25/635892900467041421-1425876384_writing.jpg',
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/' + article.get("KnowledgeArticleId") + '.jpg?raw=true',
                 "buttons": [
                     
                     {
