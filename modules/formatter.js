@@ -211,7 +211,8 @@ exports.showReview = response => {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": `text from the #1 review from community - author`,
+                "text": `High Quality Tent! Well made and extremely easy to set up. 
+Rained about 6 of the 8 days during my stay. Took me 3 to set up by myself after watching the video. - Ron Taylor`,
                 "buttons": [
                     {
                         "type":"web_url",
