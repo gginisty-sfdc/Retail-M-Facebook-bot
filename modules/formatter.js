@@ -69,7 +69,7 @@ exports.formatArticles = articles => {
             elements.push({
                 title: article.get("Title"),
                 subtitle: article.get("Summary"),
-                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/'+article.get("KnowledgeArticleId")+'.jpg?raw=true',
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/photo_blog-420x200.jpg?raw=true',
                 "buttons": [
                     
                     {
@@ -103,17 +103,17 @@ exports.askstyle = response => {
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Trending Equipment",
+            "title":"Baby boy",
             "payload":"trendequip"
           },
           {
             "content_type":"text",
-            "title":"New Tech",
+            "title":"Baby Girl",
             "payload":"newtech"
           },
           {
             "content_type":"text",
-            "title":"Low Cost",
+            "title":"Newborn",
             "payload":"lowcost"
           }
         ]
@@ -126,9 +126,9 @@ exports.formatRecommendation = rec => {
         elements.push(  
             
             {
-                title: 'Ultralight tent',
-                subtitle: `Comfort, safety, and enjoyment on every adventure`,
-                "image_url": 'https://www.dropbox.com/s/l0gqvgjb0w2zo9w/1.jpg?raw=1',
+                title: '5 bodies bébé fille manches longues',
+                subtitle: `Ce lot joue la carte des couleurs pastel et sont tricotés avec tout le savoir-faire Petit Bateau`,
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%201.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -142,16 +142,16 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type":"web_url",
-                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "url":"http://www.petit-bateau.fr/e-shop/product/23176/O00/lot-de-5-bodies-bebe-fille-manches-longues.html",
                         "title":"Purchase"
                     }
                 ]
             },
             
             {
-                title: 'Himalaya Nap Hammock',
-                subtitle: `20% discount on our best-selling hammock!`,
-                "image_url": 'https://www.dropbox.com/s/24lqqpc7nvqved2/2.jpg?raw=1',
+                title: 'Lot de 2 dors bien bébé mixte',
+                subtitle: `Ce lot de dors bien bébé confectionnés en côte 1x1 se compose de deux pyjamas bébé complémentaires`,
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%202.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -165,15 +165,15 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type":"web_url",
-                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "url":"http://www.petit-bateau.fr/e-shop/product/22170/O00/lot-de-2-dors-bien-bebe-mixte.html",
                         "title":"Purchase"
                     }
                 ]
             },
             {
-                title: 'Survival fire starter kit',
-                subtitle: `Strikes up to 15,000 times. Only 31 grams.`,
-                "image_url": 'https://www.dropbox.com/s/dta9hz8dm49qfbg/3.jpg?raw=1',
+                title: 'Veste bébé fille en tubique matelassé',
+                subtitle: `Cette veste légère bébé fille est confectionnée en tubique matelassé uni sur l'endroit et imprimé de pois sur l'envers`,
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%203.jpg?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -187,7 +187,7 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type":"web_url",
-                        "url":"https://sdodemo-main-141e22218e0-144-15950af6391.force.com/nto/s/article/",
+                        "url":"http://www.petit-bateau.fr/e-shop/product/22052/O84/veste-bebe-fille-en-tubique-matelasse.html",
                         "title":"Purchase"
                     }
                 ]
@@ -211,8 +211,8 @@ exports.showReview = response => {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": `High Quality Tent! Well made and extremely easy to set up. 
-Rained about 6 of the 8 days during my stay. Took me 3 to set up by myself after watching the video. - Ron Taylor`,
+                "text": `Depuis la Naissance de ma fille (qui a aujourd'hui 2 mois et demi), j'ai essayé plusieurs marques de Body / Pyjama. 
+La Meilleure marque niveau qualité, reste tout de même Petit Bateau. Apres un certain nombre de lavages, les bodys restent comme neufs ! `,
                 "buttons": [
                     {
                         "type":"web_url",
