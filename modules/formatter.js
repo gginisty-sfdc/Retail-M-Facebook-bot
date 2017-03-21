@@ -6,7 +6,7 @@ let moment = require("moment"),
 
 exports.challenge = response => {
     return {
-        "text":"NTO is a community of experts to help you achieve your goals. What challenge would you like to take on in the next few months?",
+        "text":"The Michelin assistant is here to give you expert vehicle tips and tire advice. What is you car manufacturer ?",
         "quick_replies":[
           {
             "content_type":"text",
@@ -128,7 +128,7 @@ exports.formatRecommendation = rec => {
             {
                 title: 'MICHELIN Primacy 3',
                 subtitle: `The perfect combination of safety and longetivity`,
-                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%201.jpg?raw=1',
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/520x540_desktop_primacy_3.png?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -151,7 +151,7 @@ exports.formatRecommendation = rec => {
             {
                 title: 'MICHELIN Energy Saver+',
                 subtitle: `The safe, long-lasting & fuel efficient tyre`,
-                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%202.jpg?raw=1',
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/520x540_desktop_energy_saver_plus.png?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -165,15 +165,15 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type":"web_url",
-                        "url":"http://www.petit-bateau.fr/e-shop/product/22170/O00/lot-de-2-dors-bien-bebe-mixte.html",
+                        "url":"http://www.michelin.co.uk/tyres/michelin-energy-saver-plus",
                         "title":"Purchase"
                     }
                 ]
             },
             {
-                title: 'Veste bébé fille en tubique matelassé',
-                subtitle: ``,
-                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%203.jpg?raw=1',
+                title: 'Michelin Alpin A4',
+                subtitle: `Drive in total confidence for one extra winter.`,
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/290x400_desktop_alpin_a4.png?raw=1',
                 "buttons": [
                     {
                         "type": "postback",
@@ -182,12 +182,12 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type": "postback",
-                        "title": "Get In Store",
+                        "title": "Find a dealer",
                         "payload": "getinstore"
                     },
                     {
                         "type":"web_url",
-                        "url":"http://www.petit-bateau.fr/e-shop/product/22052/O84/veste-bebe-fille-en-tubique-matelasse.html",
+                        "url":"http://www.michelin.co.uk/tyres/michelin-alpin-a4",
                         "title":"Purchase"
                     }
                 ]
@@ -211,8 +211,8 @@ exports.showReview = response => {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": `Depuis la Naissance de ma fille (qui a aujourd'hui 2 mois et demi), j'ai essayé plusieurs marques de Body / Pyjama. 
-La Meilleure marque niveau qualité, reste tout de même Petit Bateau. Apres un certain nombre de lavages, les bodys restent comme neufs ! `,
+                "text": `These tyres turned my car from a "wallowing boat" into a precision driving instrument. 
+True, the ride is not as comfortable as it was before, but prefer better handling to ride comfort any day. Highly recommend. `,
                 "buttons": [
                     {
                         "type":"web_url",
