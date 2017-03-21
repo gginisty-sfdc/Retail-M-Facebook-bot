@@ -10,17 +10,17 @@ exports.challenge = response => {
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Camp and Relax",
+            "title":"Mini",
             "payload":"camprelax"
           },
           {
             "content_type":"text",
-            "title":"Climb a Mountain",
+            "title":"Renault",
             "payload":"climbmountain"
           },
           {
             "content_type":"text",
-            "title":"Perfect My Rock Climbing",
+            "title":"BMW",
             "payload":"perfectclimbing"
           }
         ]
@@ -29,11 +29,11 @@ exports.challenge = response => {
 
 exports.easyone = response => {
     return {
-        "text":"Easy one :) How can I help?",
+        "text":"Great taste :) How can I help",
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Browse Products",
+            "title":"Browse Tires",
             "payload":"browseproducts"
           },
           {
@@ -51,7 +51,7 @@ exports.easyone2 = response => {
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Browse Products",
+            "title":"Browse Tires",
             "payload":"browseproducts"
           },
           {
@@ -69,7 +69,7 @@ exports.formatArticles = articles => {
             elements.push({
                 title: article.get("Title"),
                 subtitle: article.get("Summary"),
-                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/photo_blog-420x200.jpg?raw=true',
+                "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image-1.jpg?raw=true',
                 "buttons": [
                     
                     {
@@ -99,21 +99,21 @@ exports.formatArticles = articles => {
 
 exports.askstyle = response => {
     return {
-        "text":"What is your style?",
+        "text":"How often do you drive in winter conditions?",
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"Baby boy",
+            "title":"Never",
             "payload":"trendequip"
           },
           {
             "content_type":"text",
-            "title":"Baby Girl",
+            "title":"Occasionally",
             "payload":"newtech"
           },
           {
             "content_type":"text",
-            "title":"Newborn",
+            "title":"Often",
             "payload":"lowcost"
           }
         ]
@@ -126,8 +126,8 @@ exports.formatRecommendation = rec => {
         elements.push(  
             
             {
-                title: '5 bodies bébé fille manches longues',
-                subtitle: `Ce lot joue la carte des couleurs pastel et sont tricotés avec tout le savoir-faire Petit Bateau`,
+                title: 'MICHELIN Primacy 3',
+                subtitle: `The perfect combination of safety and longetivity`,
                 "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%201.jpg?raw=1',
                 "buttons": [
                     {
@@ -137,20 +137,20 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type": "postback",
-                        "title": "Get In Store",
+                        "title": "Find a dealer",
                         "payload": "getinstore"
                     },
                     {
                         "type":"web_url",
-                        "url":"http://www.petit-bateau.fr/e-shop/product/23176/O00/lot-de-5-bodies-bebe-fille-manches-longues.html",
+                        "url":"http://www.michelin.co.uk/tyres/michelin-primacy-3",
                         "title":"Purchase"
                     }
                 ]
             },
             
             {
-                title: 'Lot de 2 dors bien bébé mixte',
-                subtitle: `Ce lot de dors bien bébé confectionnés en côte 1x1 se compose de deux pyjamas bébé complémentaires`,
+                title: 'MICHELIN Energy Saver+',
+                subtitle: `The safe, long-lasting & fuel efficient tyre`,
                 "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%202.jpg?raw=1',
                 "buttons": [
                     {
@@ -160,7 +160,7 @@ exports.formatRecommendation = rec => {
                     },
                     {
                         "type": "postback",
-                        "title": "Get In Store",
+                        "title": "Find a dealer",
                         "payload": "getinstore"
                     },
                     {
@@ -172,7 +172,7 @@ exports.formatRecommendation = rec => {
             },
             {
                 title: 'Veste bébé fille en tubique matelassé',
-                subtitle: `Cette veste légère bébé fille est confectionnée en tubique matelassé uni sur l'endroit et imprimé de pois sur l'envers`,
+                subtitle: ``,
                 "image_url": 'https://github.com/gginisty-sfdc/demo-img/blob/master/Image%203.jpg?raw=1',
                 "buttons": [
                     {
