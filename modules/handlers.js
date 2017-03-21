@@ -18,9 +18,9 @@ exports.test = (sender) => {
 exports.hello = (sender) => {
     console.log('hello');
     messenger.getUserInfo(sender).then(response => {
-        messenger.send({text: `Hello, ${response.first_name}! I am your Northen Trail assistant.`}, sender);
+        messenger.send({text: `Hello, ${response.first_name}! I am your Michelin tires assistant. Your trusted advisor for vehicle tips and tire advice`}, sender);
         setTimeout(function(){ 
-            messenger.send({text: `I'm just a humble chatbot, really. But you can talk to my human pals at any time by typing “help”.`}, sender);
+            messenger.send({text: `PS : you can talk to my human pals at any time by typing “help”.`}, sender);
         }, 2000);
         setTimeout(function(){ 
             messenger.send(formatter.challenge(response), sender);
